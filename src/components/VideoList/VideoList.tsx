@@ -1,10 +1,10 @@
 import React from 'react';
 import { videosApi } from '../../services/videosApi';
 import { IVideos } from '../../models/IVideos';
-import VideoItem from './VideoItem';
+import VideoItem from '../VideoItem/VideoItem';
 import Loader from '../Loader/Loader';
 
-const VideoItems = () => {
+const VideoList = () => {
   const {
     data: videos,
     error,
@@ -23,4 +23,4 @@ const VideoItems = () => {
   );
 };
 
-export default VideoItems;
+export default VideoList;
