@@ -8,10 +8,10 @@ import { setupStore } from './store/Store';
 const store = setupStore();
 
 ReactDOM.render(
-  <Provider store={store}>
-    <React.StrictMode>
+  <React.StrictMode>
+    <Provider store={store}>
       <App />
-    </React.StrictMode>
-  </Provider>,
+    </Provider>
+  </React.StrictMode>,
   document.querySelector('#root')
 );
