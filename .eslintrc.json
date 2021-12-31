@@ -85,9 +85,7 @@
           "camelCase": true,
           "pascalCase": true
         },
-        "ignore": [
-          "react-app-env.d.ts"
-        ]
+        "ignore": ["react-app-env.d.ts"]
       }
     ],
     "unicorn/prefer-spread": "warn",

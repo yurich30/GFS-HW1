@@ -3,14 +3,14 @@
   margin: 40px auto;
 }
 
-.user{
+.user {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.user__avatar{
+.user__avatar {
   max-width: 200px;
   border-radius: 50%;
 }
