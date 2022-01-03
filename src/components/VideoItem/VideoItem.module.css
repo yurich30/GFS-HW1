@@ -1,8 +1,8 @@
-.item {
+.tiktuk {
   max-width: 300px;
 }
 
-.item__header {
+.tiktuk__header {
   display: flex;
   justify-content: space-between;
 }
@@ -11,7 +11,7 @@
   display: flex;
 }
 
-.item__avatar {
+.tiktuk__avatar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -24,12 +24,12 @@
   background-color: transparent;
 }
 
-.item__video {
+.tiktuk__video {
   max-width: 300px;
   grid-row-end: span 2;
 }
 
-.item__header {
+.tiktuk__header {
   margin-bottom: 10px;
 }
 
@@ -37,24 +37,29 @@
   max-height: 40px;
 }
 
-.item__avatar {
+.tiktuk__avatar {
   margin-right: 5px;
 }
 
-.item a {
+.tiktuk a {
   color: #000000;
   text-decoration: none;
 }
 
-.item a:hover {
+.tiktuk a:hover {
   color: #f1356d;
 }
 
-.item .name {
+.tiktuk .name {
   font-size: 20px;
   line-height: 24px;
 }
 
 .hashtags {
   margin: 5px 0;
+  max-width: 184px;
+}
+
+.hashtags span {
+  display: inline-block;
 }

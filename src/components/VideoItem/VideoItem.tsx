@@ -9,18 +9,18 @@ interface IVideoItemProperties {
 
 const VideoItem: React.FC<IVideoItemProperties> = ({ video }) => {
   return (
-    <div className={styles.item}>
-      <div className={styles.item__header}>
+    <div className={styles.tiktuk}>
+      <div className={styles.tiktuk__header}>
         <Link to={`/user`}>
           <div className={styles.author__info}>
             <img
               src={video.authorMeta.avatar}
               alt="avatar"
-              className={styles.item__avatar}
+              className={styles.tiktuk__avatar}
             />
             <div className={styles.info}>
               <div className={styles.name}>{video.authorMeta.name}</div>
-              <div className={styles.hashtags}>{video?.hashtags[0]?.name}</div>
+              <div className={styles.hashtags}>{video.hashtags?.map(hashtag => <span key={hashtag.name}>{hashtag.name}</span>)}</div>
               <div className={styles.music}>
                 {video.musicMeta.musicName} - {video.musicMeta.musicAuthor}
               </div>
@@ -35,12 +35,12 @@ const VideoItem: React.FC<IVideoItemProperties> = ({ video }) => {
           src={video.videoUrl}
           autoPlay
           loop
-          className={styles.item__video}
+          className={styles.tiktuk__video}
         />
-        <div className="item__video-info">
-          <div className="item__video-likes"></div>
-          <div className="item__videos-comments"></div>
-          <div className="item__videos-repost"></div>
+        <div className="tiktuk__video-info">
+          <div className="tiktuk__video-likes"></div>
+          <div className="tiktuk__videos-comments"></div>
+          <div className="tiktuk__videos-repost"></div>
         </div>
       </div>
     </div>

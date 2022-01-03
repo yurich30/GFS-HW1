@@ -4,9 +4,9 @@ import styles from './UserVideos.module.css';
 
 const UserVideos = () => {
   return (
-    <div className={styles.item__list}>
+    <ul className={styles.user__video__list}>
       {data.itemList.map((element) => (
-        <div key={element.id}>
+        <li key={element.id}>
           <div>View Count: {element.stats.playCount}</div>
           <video
             controls
@@ -15,9 +15,9 @@ const UserVideos = () => {
             loop
             className={styles.item__video}
           />
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
