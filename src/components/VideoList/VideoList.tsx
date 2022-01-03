@@ -3,6 +3,7 @@ import { videosApi } from '../../services/videosApi';
 import { IVideos } from '../../models/IVideos';
 import VideoItem from '../VideoItem/VideoItem';
 import Loader from '../Loader/Loader';
+import styles from './VideoList.module.css';
 
 const VideoList = () => {
   const {
@@ -12,7 +13,7 @@ const VideoList = () => {
   } = videosApi.useFetchAllVideosQuery('');
 
   return (
-    <div className="item__list container">
+    <div className={styles.container}>
       {error && <h1>Error</h1>}
       {videos &&
         videos.map((video: IVideos) => (

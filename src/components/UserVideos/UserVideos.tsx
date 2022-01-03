@@ -1,10 +1,10 @@
 import React from 'react';
 import data from '../../data/user-feed.json';
-import '../VideoItem/VideoItem.css';
+import styles from './UserVideos.module.css';
 
 const UserVideos = () => {
   return (
-    <div className="container item__list">
+    <div className={styles.item__list}>
       {data.itemList.map((element) => (
         <div key={element.id}>
           <div>View Count: {element.stats.playCount}</div>
@@ -13,7 +13,7 @@ const UserVideos = () => {
             src={element.video.playAddr}
             autoPlay
             loop
-            className="item__video"
+            className={styles.item__video}
           />
         </div>
       ))}

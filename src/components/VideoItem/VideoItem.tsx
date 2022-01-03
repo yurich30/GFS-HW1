@@ -1,6 +1,6 @@
 import React from 'react';
 import { IVideos } from '../../models/IVideos';
-import './VideoItem.css';
+import styles from './VideoItem.module.css';
 import { Link } from 'react-router-dom';
 
 interface IVideoItemProperties {
@@ -9,33 +9,33 @@ interface IVideoItemProperties {
 
 const VideoItem: React.FC<IVideoItemProperties> = ({ video }) => {
   return (
-    <div className="item">
-      <div className="item__header">
+    <div className={styles.item}>
+      <div className={styles.item__header}>
         <Link to={`/user`}>
-          <div className="author__info">
+          <div className={styles.author__info}>
             <img
               src={video.authorMeta.avatar}
               alt="avatar"
-              className="item__avatar"
+              className={styles.item__avatar}
             />
-            <div className="info">
-              <div className="name">{video.authorMeta.name}</div>
-              <div className="hashtags">{video?.hashtags[0]?.name}</div>
-              <div className="music">
+            <div className={styles.info}>
+              <div className={styles.name}>{video.authorMeta.name}</div>
+              <div className={styles.hashtags}>{video?.hashtags[0]?.name}</div>
+              <div className={styles.music}>
                 {video.musicMeta.musicName} - {video.musicMeta.musicAuthor}
               </div>
             </div>
           </div>
         </Link>
-        <button className="follow__button">Follow</button>
+        <button className={styles.follow__button}>Follow</button>
       </div>
-      <div className="item__video-section">
+      <div className={styles.container}>
         <video
           controls
           src={video.videoUrl}
           autoPlay
           loop
-          className="item__video"
+          className={styles.item__video}
         />
         <div className="item__video-info">
           <div className="item__video-likes"></div>
