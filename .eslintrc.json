@@ -1,0 +1,102 @@
+{
+  "plugins": ["prettier", "@typescript-eslint", "promise", "unicorn", "more"],
+  "extends": [
+    "airbnb-typescript",
+    "react-app",
+    "prettier",
+    "plugin:promise/recommended",
+    "plugin:unicorn/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "tsconfigRootDir": ".",
+    "project": ["./tsconfig.eslint.json"]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js"],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "rules": {
+        "@typescript-eslint/prefer-nullish-coalescing": "error"
+      }
+    }
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "object-curly-spacing": ["warn", "always"],
+    "@typescript-eslint/semi": ["off"],
+    "@typescript-eslint/no-explicit-any": [
+      "warn",
+      {
+        "ignoreRestArgs": true
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 80,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreComments": true
+      }
+    ],
+    "no-plusplus": "warn",
+    "react/jsx-key": "error",
+    "import/no-extraneous-dependencies": "warn",
+    "react/jsx-props-no-spreading": "warn",
+    "import/prefer-default-export": "warn",
+    "react/jsx-boolean-value": "warn",
+    "react/prop-types": "warn",
+    "@typescript-eslint/naming-convention": "warn",
+    "react/no-unescaped-entities": "warn",
+    "react/jsx-one-expression-per-line": "warn",
+    "react/jsx-wrap-multilines": "warn",
+    "react/destructuring-assignment": "warn",
+    "@typescript-eslint/no-unused-vars": "error",
+    "no-unused-vars": "warn",
+    "semi": "error",
+    "@typescript-eslint/prefer-nullish-coalescing": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "more/no-void-map": 2,
+    "more/no-c-like-loops": 2,
+    "more/prefer-includes": 2,
+    "more/no-then": 2,
+    "more/no-window": 2,
+    "more/no-numeric-endings-for-variables": 2,
+    "more/no-filter-instead-of-find": 2,
+    "more/force-native-methods": 2,
+    "more/no-duplicated-chains": 2,
+    "more/classbody-starts-with-newline": [2, "never"],
+    "more/no-hardcoded-password": 2,
+    "more/no-hardcoded-configuration-data": 2,
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "camelCase": true,
+          "pascalCase": true
+        },
+        "ignore": ["react-app-env.d.ts"]
+      }
+    ],
+    "unicorn/prefer-spread": "warn",
+    "more/no-hardcoded-configuration-data": "warn",
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "allowList": {
+          "env": true
+        }
+      }
+    ]
+  }
+}
