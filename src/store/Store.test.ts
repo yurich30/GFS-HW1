@@ -8,9 +8,7 @@ describe('Test videosApi fetchAllVideos', () => {
   });
 
   it('request is correct fetchAllVideos', () => {
-    const storeReference = setupApiStore(videosApi, {
-      [videosApi.reducerPath]: videosApi.reducer,
-    });
+    const storeReference = setupApiStore(videosApi);
     fetchMock.mockResponse(JSON.stringify({}));
 
     return storeReference.store
@@ -26,9 +24,7 @@ describe('Test videosApi fetchAllVideos', () => {
   });
 
   it('successful response fetchAllVideos', () => {
-    const storeReference = setupApiStore(videosApi, {
-      [videosApi.reducerPath]: videosApi.reducer,
-    });
+    const storeReference = setupApiStore(videosApi);
     fetchMock.mockResponse(JSON.stringify(['videos']));
 
     return storeReference.store
@@ -42,9 +38,7 @@ describe('Test videosApi fetchAllVideos', () => {
   });
 
   it('unsuccessful response fetchAllVideos', () => {
-    const storeReference = setupApiStore(videosApi, {
-      [videosApi.reducerPath]: videosApi.reducer,
-    });
+    const storeReference = setupApiStore(videosApi);
     fetchMock.mockReject(new Error('Internal Server Error'));
 
     return storeReference.store
@@ -68,9 +62,7 @@ describe('Test videosApi fetchUserInfo', () => {
   });
 
   it('request is correct fetchUserInfo', () => {
-    const storeReference = setupApiStore(videosApi, {
-      [videosApi.reducerPath]: videosApi.reducer,
-    });
+    const storeReference = setupApiStore(videosApi);
     fetchMock.mockResponse(JSON.stringify({}));
 
     return storeReference.store
@@ -86,9 +78,7 @@ describe('Test videosApi fetchUserInfo', () => {
   });
 
   it('successful response fetchUserInfo', () => {
-    const storeReference = setupApiStore(videosApi, {
-      [videosApi.reducerPath]: videosApi.reducer,
-    });
+    const storeReference = setupApiStore(videosApi);
     fetchMock.mockResponse(JSON.stringify(['user']));
 
     return storeReference.store
@@ -102,9 +92,7 @@ describe('Test videosApi fetchUserInfo', () => {
   });
 
   it('unsuccessful response fetchUserInfo', () => {
-    const storeReference = setupApiStore(videosApi, {
-      [videosApi.reducerPath]: videosApi.reducer,
-    });
+    const storeReference = setupApiStore(videosApi);
     fetchMock.mockReject(new Error('Internal Server Error'));
 
     return storeReference.store

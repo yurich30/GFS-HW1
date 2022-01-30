@@ -1,1 +1,2 @@
 src/store/*.test.ts
+src/components/VideoList/*.test.ts
