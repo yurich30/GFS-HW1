@@ -1,0 +1,54 @@
+{
+  "name": "com.example.tiktuk",
+  "displayName": "tik-tuk",
+  "version": "1.0.0",
+  "homepage": "./",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.6.2",
+    "axios": "^0.24.0",
+    "esbuild": "^0.14.21",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.0.2",
+    "react-scripts": "4.0.3",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:esbuild": "esbuild src/index.tsx --bundle --minify --sourcemap --outfile=public/bundle.js",
+    "test": "react-scripts test",
+    "test:lint": "eslint \"./src/**/*{ts,tsx}\"",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^10.1.1",
+    "cordova-ios": "^6.2.0"
+  },
+  "cordova": {
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  }
+}
