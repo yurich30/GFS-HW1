@@ -1,9 +1,13 @@
 {
   "name": "tik-tuk",
   "version": "0.1.0",
+  "browser": {
+    "path": "path-browserify"
+  },
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
+    "@yurich30/component-library": "^0.0.3",
     "axios": "^0.24.0",
     "esbuild": "^0.14.21",
     "react": "^17.0.2",
