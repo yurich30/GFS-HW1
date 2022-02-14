@@ -1,25 +1,22 @@
 import React from 'react';
-import { videosApi } from '../../services/videosApi';
-import { IVideos } from '../../models/IVideos';
-import VideoItem from '../VideoItem/VideoItem';
-import Loader from '../Loader/Loader';
+import { VideoItem } from "@yurich30/component-library";
 import styles from './VideoList.module.css';
+import videos from '../../data/fedd.json';
 
 const VideoList = () => {
-  const {
-    data: videos,
-    error,
-    isLoading,
-  } = videosApi.useFetchAllVideosQuery('');
+//   const {
+//     data: videos,
+//     error,
+//     isLoading,
+//   } = videosApi.useFetchAllVideosQuery('');
 
   return (
     <div className={styles.container}>
-      {error && <h1>Error</h1>}
-      {videos &&
-        videos.map((video: IVideos) => (
+      {/*{error && <h1>Error</h1>}*/}
+      {videos.map((video: any) => (
           <VideoItem key={video.id} video={video} />
         ))}
-      {isLoading && <Loader />}
+      {/*{isLoading && <Loader />}*/}
     </div>
   );
 };
