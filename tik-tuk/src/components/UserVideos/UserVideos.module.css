@@ -1,0 +1,4 @@
+.user__video__list {
+  max-width: 300px;
+  grid-row-end: span 2;
+}
